@@ -84,7 +84,7 @@ endif ()
 
 add_lldb_executable(lldb-mi ${LLDB_MI_SOURCES})
 
-target_link_libraries(lldb-mi liblldb)
+target_link_libraries(lldb-mi LLVMSupport liblldb)
 if ( NOT CMAKE_SYSTEM_NAME MATCHES "Windows" )
   target_link_libraries(lldb-mi pthread)
 endif ()
